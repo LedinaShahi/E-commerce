@@ -47,6 +47,7 @@ var produkte = [
         name: "LIP care"
     },
 ];
+console.log('test')
 
 var procontainer = document.getElementById("pro-container");
 
