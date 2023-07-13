@@ -70,3 +70,7 @@ produkte.forEach(function(produkt) {
    procontainer.appendChild(produktElement);
 
 });
+
+
+//shopping cart
+
