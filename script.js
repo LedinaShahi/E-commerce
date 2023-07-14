@@ -72,5 +72,6 @@ produkte.forEach(function(produkt) {
 });
 
 
-//shopping cart
-
+//shopping Cart
+const list = document.querySelector('.product');
+const search = document.querySelector('.search input');
