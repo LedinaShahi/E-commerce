@@ -70,8 +70,3 @@ produkte.forEach(function(produkt) {
    procontainer.appendChild(produktElement);
 
 });
-
-
-//shopping Cart
-const list = document.querySelector('.product');
-const search = document.querySelector('.search input');
