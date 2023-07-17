@@ -21,7 +21,119 @@
                 <li id="bag"><a href="cart.html"><i class="fa-solid fa-bag-shopping"></i></a></li>
             </ul>
         </div>
+
     </section>
 
+
+    <section id="product1" class="section-p1"> 
+        <h2>Featured Products</h2>
+        <p>Koleksioni me produktet best seller</p>
+        <div id="shop-container"> 
+        </div>
+        <button class="shopbutton">Shiko më shumë</button>
+
+    </section> 
+
+
     <script>
+        const shop = [
+    {
+        img: "img/dior.jpg",
+        price: 25,
+        name: "Lares"
+    },
+
+    {
+        img: "img/loreal.jpg",
+        price: 99,
+        name: "Serum"
+    },
+
+    {
+        img: "img/spf.jpg",
+        price: 45,
+        name: "SPF"
+    },
+    
+    {
+        img: "img/nivea.webp",
+        price: 22,
+        name: "Hidratues"
+    },
+
+    {
+        img: "img/missha.webp",
+        price: 12,
+        name: "BB cream"
+    },
+
+    {
+        img: "img/12.webp",
+        price: 11,
+        name: "SERum BJ"
+    },
+
+    {
+        img: "img/paula.webp",
+        price: 33,
+        name: "BHA & AHA"
+    },
+
+    {
+        img: "img/2.jpg",
+        price: 56,
+        name: "LIP care"
+    },
+
+    {
+        img: "img/yns.png",
+        price: 25,
+        name: "face mask"
+    },
+    {
+        img: "img/the.jpg",
+        price: 15,
+        name: "Peeling Mask"
+    },
+
+    {
+        img: "img/rare.jpg",
+        price: 62,
+        name: "Blush"
+    },
+    {
+        img: "img/no.webp",
+        price: 55,
+        name: "serum"
+    },
+    {
+        img: "img/brand.jpg",
+        price: 90,
+        name: "Face Lifter"
+    },
+    
+];
+
+
+const shopcontainer = document.getElementById("shop-container");
+
+shop.forEach(function(shop) {
+   var shopElement= document.createElement("div");
+   shopElement.classList.add("shop");
+ 
+   var imgElement = document.createElement("img");
+   imgElement.src = shop.img;
+   shopElement.appendChild(imgElement);
+ 
+   var nameElement = document.createElement("h3");
+   nameElement.textContent = shop.name;
+   shopElement.appendChild(nameElement);
+ 
+   var priceElement = document.createElement("p");
+   priceElement.textContent = "Cmimi: $" + shop.price;
+   shopElement.appendChild(priceElement);
+ 
+   shopcontainer.appendChild(shopElement);
+
+});
      </script>
