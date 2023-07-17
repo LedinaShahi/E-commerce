@@ -9,7 +9,6 @@
 <body>
     <section id="header">
         <a href="#"> <img src="img/llogo.webp" class= "logo" width="70px"></a>
-
         <div>
             <ul id="navbar">
                 <li><a href="index.html">Home</a></li>
@@ -26,14 +25,19 @@
         <header class="text-center text-light my-4">
             <h1 class="mb-4">Shopping Cart</h1>
             <form class="search">
-                <input class="form-control m-auto" type="text" name="search" placeholder="search items"/>
+                <input class="form-control m-auto" type="text" id="searchInput" name="search" placeholder="search items"/>
             </form>
-</header>
+        </header>
         <ul class="list-group product mx-auto text-light">
             <li class="list-group-item d-flex justify-content-between align-items-center">
                 <tr>
                     <td> <img src="img/kylie.jpg" alt="" width="300px" height="300px"></td>
-                    <td>Kylie LipKit</td>
+                    <td >
+                        <p class="sname">
+                            Kylie LipKit
+                        </p>
+                       
+                    </td>
                     <td><input type="number" class="quantity" value="1"></td>
                     <td>99$</td>
                 </tr>
@@ -42,7 +46,9 @@
             <li class="list-group-item d-flex justify-content-between align-items-center">
                 <tr>
                     <td> <img src="img/kylie.jpg" alt="" width="300px" height="300px"></td>
-                    <td>Kylie LipKit</td>
+                   <td ><p class="sname">
+                    Kylie LipKit
+                </p> </td>
                     <td><input type="number" class="quantity" value="1"></td>
                     <td>99$</td>
                 </tr>
@@ -51,13 +57,16 @@
             <li class="list-group-item d-flex justify-content-between align-items-center">
                 <tr>
                     <td> <img src="img/kylie.jpg" alt="" width="300px" height="300px"></td>
-                    <td>Kylie LipKit</td>
+                   <td ><p class="sname">
+                    fdfdfd 
+                </p> </td>
                     <td><input type="number" class="quantity" value="1"></td>
                     <td>99$</td>
                 </tr>
              <i class="far fa-trash-alt delete"></i>
             </li>
         </ul>
+     </div>
     <script src="cart.js"></script>
 </body>
 </html>

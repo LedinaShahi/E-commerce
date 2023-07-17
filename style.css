@@ -535,3 +535,7 @@ footer p {
   .list-group-item .delete:hover {
     color: #ff004f;
 }
+
+.filtered{
+    display: none !important;
+}
