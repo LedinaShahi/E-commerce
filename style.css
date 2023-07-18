@@ -601,9 +601,9 @@ footer p {
     height: 80%;
   }
 
-  .shopbutton {
-    background-color: #e66c9b;
-    color: white;
+  /* .allshop {
+    background-color: #e6bfce;
+    color: rgb(255, 255, 255);
     padding: 10px 20px;
     font-size: 16px;
     border: none;
@@ -612,6 +612,14 @@ footer p {
     position: absolute;
     left: 350px;
     top: 1900px;
+  } */
+
+  .shopnow {
+    background-color: #e787b4;
+    color: #990733;
+    padding: 10px 20px;
+    border-radius: 10px;
+
   }
   
   .shopbutton:hover {
@@ -733,6 +741,7 @@ p {
 
 form {
     text-align: center;
+    transform: scale(1);
 }
 
 h2 {

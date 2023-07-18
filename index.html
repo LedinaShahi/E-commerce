@@ -28,7 +28,7 @@
         <h2>Super oferta dhe cmime</h2>
         <h1>Ne te gjitha produktet</h1>
         <p>Sa me shume blerje aq me shume % ulje</p>
-        <button>Shop now</button>
+        <p class="shopnow"><a href="#" onclick="shopnow()">Shop Now</a></p>
     </section>
     
     <section id="feature" class="section-p1">
@@ -89,7 +89,7 @@
                 </div>
                 <h4>12$</h4>
             </div>
-            <a href="#"><i class="fa-solid fa-cart-shopping " id="cart" ></i></a>
+            <i class="fa-solid fa-cart-shopping" id="cart" onclick="addToCart()"></i>
         </div>
         <div class="pro">
             <img src="img/huda.webp" alt="" width="200px">
@@ -137,8 +137,10 @@
                 </div>
                 <h4>15$</h4>
             </div>
-            <a href="#"><i class="fa-solid fa-cart-shopping " id="cart" ></i></a>
-        </div>
+            <a href="cart.html" onclick="addToCart(event)">
+                <i class="fa-solid fa-cart-shopping" id="cart"></i>
+            </a> 
+            </div>
         <div class="pro">
             <img src="img/rem.png" alt="" width="200px">
             <div class="des">

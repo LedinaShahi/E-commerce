@@ -3,7 +3,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <title>E Commerce Website</title>
 </head>
@@ -31,8 +30,7 @@
         <p>Koleksioni me produktet best seller</p>
         <div id="shop-container"> 
         </div>
-        <button class="shopbutton">Shiko më shumë</button>
-
+        <p class="allshop"><a href="#" onclick="showAllshop(event)">Shiko me shume</a></p>
     </section> 
 
 
@@ -41,100 +39,135 @@
     {
         img: "img/dior.jpg",
         price: 25,
-        name: "Lares"
+        name: "Lares",
+        cartIcon: '<i class="fa-solid fa-cart-shopping" onclick="addToCart()"></i>'
     },
 
     {
         img: "img/loreal.jpg",
         price: 99,
-        name: "Serum"
+        name: "Serum",
+        cartIcon: '<i class="fa-solid fa-cart-shopping" onclick="addToCart()"></i>'
     },
 
     {
         img: "img/spf.jpg",
         price: 45,
-        name: "SPF"
+        name: "SPF",
+        cartIcon: '<i class="fa-solid fa-cart-shopping" onclick="addToCart()"></i>'
     },
     
     {
         img: "img/nivea.webp",
         price: 22,
-        name: "Hidratues"
+        name: "Hidratues",
+        cartIcon: '<i class="fa-solid fa-cart-shopping" onclick="addToCart()"></i>'
     },
 
     {
         img: "img/missha.webp",
         price: 12,
-        name: "BB cream"
+        name: "BB cream",
+        cartIcon: '<i class="fa-solid fa-cart-shopping" onclick="addToCart()"></i>'
     },
 
     {
         img: "img/12.webp",
         price: 11,
-        name: "SERum BJ"
+        name: "SERum BJ",
+        cartIcon: '<i class="fa-solid fa-cart-shopping" onclick="addToCart()"></i>'
     },
 
     {
         img: "img/paula.webp",
         price: 33,
-        name: "BHA & AHA"
+        name: "BHA & AHA",
+        cartIcon: '<i class="fa-solid fa-cart-shopping" onclick="addToCart()"></i>'
     },
 
     {
         img: "img/2.jpg",
         price: 56,
-        name: "LIP care"
+        name: "LIP care",
+        cartIcon: '<i class="fa-solid fa-cart-shopping" onclick="addToCart()"></i>'
     },
 
     {
         img: "img/yns.png",
         price: 25,
-        name: "face mask"
+        name: "face mask",
+        cartIcon: '<i class="fa-solid fa-cart-shopping" onclick="addToCart()"></i>'
     },
     {
         img: "img/the.jpg",
         price: 15,
-        name: "Peeling Mask"
+        name: "Peeling Mask",
+        cartIcon: '<i class="fa-solid fa-cart-shopping" onclick="addToCart()"></i>'
     },
 
     {
         img: "img/rare.jpg",
         price: 62,
-        name: "Blush"
+        name: "Blush",
+        cartIcon: '<i class="fa-solid fa-cart-shopping" onclick="addToCart()"></i>'
     },
     {
         img: "img/no.webp",
         price: 55,
-        name: "serum"
+        name: "serum",
+        cartIcon: '<i class="fa-solid fa-cart-shopping" onclick="addToCart()"></i>'
     },
     {
         img: "img/brand.jpg",
         price: 90,
-        name: "Face Lifter"
+        name: "Face Lifter",
+        cartIcon: '<i class="fa-solid fa-cart-shopping" onclick="addToCart()"></i>'
     },
     
 ];
 
+function addToCart() {}
+
+
+
+
 
 const shopcontainer = document.getElementById("shop-container");
+let numProductsShown = 4;
 
-shop.forEach(function(shop) {
-   var shopElement= document.createElement("div");
-   shopElement.classList.add("shop");
- 
-   var imgElement = document.createElement("img");
-   imgElement.src = shop.img;
-   shopElement.appendChild(imgElement);
- 
-   var nameElement = document.createElement("h3");
-   nameElement.textContent = shop.name;
-   shopElement.appendChild(nameElement);
- 
-   var priceElement = document.createElement("p");
-   priceElement.textContent = "Cmimi: $" + shop.price;
-   shopElement.appendChild(priceElement);
- 
-   shopcontainer.appendChild(shopElement);
+function showProducts() {
+        shopcontainer.innerHTML = ""; 
 
-});
-     </script>
+        
+        shop.slice(0, numProductsShown).forEach(function (product) {
+            var shopElement = document.createElement("div");
+            shopElement.classList.add("shop");
+
+            var imgElement = document.createElement("img");
+            imgElement.src = product.img;
+            shopElement.appendChild(imgElement);
+
+            var nameElement = document.createElement("h3");
+            nameElement.textContent = product.name;
+            shopElement.appendChild(nameElement);
+
+            var priceElement = document.createElement("p");
+            priceElement.textContent = "Cmimi: $" + product.price;
+            shopElement.appendChild(priceElement);
+
+            shopcontainer.appendChild(shopElement);
+        });
+
+        if (numProductsShown >= shop.length) {
+            document.querySelector(".allshop a").style.display = "none";
+        }
+    }
+
+    showProducts();
+
+    function showAllshop() {
+        event.preventDefault();
+        numProductsShown += 3;
+        showProducts(); 
+    }
+</script>

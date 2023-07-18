@@ -70,3 +70,7 @@ produkte.forEach(function(produkt) {
    procontainer.appendChild(produktElement);
 
 });
+
+function shopnow () {
+    window.location.href = "shop.html";
+}
