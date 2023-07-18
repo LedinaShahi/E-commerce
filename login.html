@@ -1,0 +1,58 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <title>E Commerce Website</title>
+</head>
+<body>
+    <section id="header">
+        <a href="#"> <img src="img/llogo.webp" class= "logo" width="70px"></a>
+        <div>
+            <ul id="navbar">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a class="active" href="login.html">LogIn</a></li>
+                <li id="bag"><a href="cart.html"><i class="fa-solid fa-bag-shopping"></i></a></li>
+            </ul>
+        </div>
+    </section>
+    <section id="login-register">
+        <div class="container">
+            <form id="login-form">
+                <h2>Login</h2>
+                <input type="text" placeholder="Username">
+                <input type="password" placeholder="Password">
+                <button type="submit">Login</button>
+                <p class="register-link">Don't have an account? <a href="#" onclick="showRegisterForm()">Register here</a></p>
+            </form>
+            <form id="register-form" style="display: none;">
+                <h2>Register</h2>
+                <input type="text" placeholder="Username">
+                <input type="email" placeholder="Email">
+                <input type="password" placeholder="Password">
+                <input type="password" placeholder="Confirm Password">
+                <button type="submit">Register</button>
+                <p class="register-link">Already have an account? <a href="#" onclick="showLoginForm()">Login here</a></p>
+            </form>
+        </div>
+    </section>
+
+    <script>
+        function showRegisterForm() {
+            document.getElementById("login-form").style.display = "none";
+            document.getElementById("register-form").style.display = "block";
+        }
+
+        function showLoginForm() {
+            document.getElementById("login-form").style.display = "block";
+            document.getElementById("register-form").style.display = "none";
+        }
+    </script>
+
+    </body>
+    </html>
