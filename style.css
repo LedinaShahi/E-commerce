@@ -741,7 +741,6 @@ p {
 
 form {
     text-align: center;
-    transform: scale(1);
 }
 
 h2 {
@@ -782,6 +781,78 @@ button[type="submit"] {
     color: #ff5f91;
     text-decoration: none;
 }
+
+/* Resetimi i stilizimit parazgjedhur */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: #f8f8f8;
+    font-family: Arial, sans-serif;
+  }
+/*   
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  } */
+  
+  h1 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #ff69b4;
+  }
+  
+  .product-list {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .product-list th,
+  .product-list td {
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .product-list th {
+    background-color: #ff69b4;
+    color: #fff;
+  }
+  
+  .product-list img {
+    max-width: 100px;
+  }
+  
+  .quantity {
+    width: 50px;
+  }
+  
+  .total-price {
+    text-align: right;
+    font-weight: bold;
+    margin-top: 20px;
+  }
+  
+  .delete {
+    color: #ff69b4;
+    cursor: pointer;
+  }
+  
+  .delete:hover {
+    color: #ff007f;
+  }
+
+
+  .search {
+    height: 485px;
+  }
+  
 
 
 

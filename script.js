@@ -74,3 +74,23 @@ produkte.forEach(function(produkt) {
 function shopnow () {
     window.location.href = "shop.html";
 }
+
+
+    function addToCart(event, productName, productPrice, imagePath) {
+        event.preventDefault(); 
+
+
+        var productList = JSON.parse(sessionStorage.getItem('productList')) || [];
+        productList.push({
+            name: productName,
+            price: productPrice,
+            image: imagePath
+        });
+
+
+        sessionStorage.setItem('productList', JSON.stringify(productList));
+
+        window.location.href = "cart.html"; 
+    }
+
+

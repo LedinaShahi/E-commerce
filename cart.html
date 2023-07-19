@@ -21,53 +21,46 @@
             </ul>
         </div>
     </section>
+    
+    <ul class="list-group product mx-auto text-light">
+    <li class="list-group-item d-flex justify-content-between align-items-center">
+        <form class="search">
+            <input class="form-control m-auto" type="text" id="searchInput" name="search" placeholder="search items"/>
+        </form>
+        <table class="product-list">
+            <thead>
+                <tr>
+                    <th>Image</th>
+                    <th>Product Name</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <script>
+                    var productList = JSON.parse(sessionStorage.getItem('productList')) || [];
 
-    <div class="container">
-        <header class="text-center text-light my-4">
-            <h2 class="mb-4">Shopping Cart</h2>
-            <form class="search">
-                <input class="form-control m-auto" type="text" id="searchInput" name="search" placeholder="search items"/>
-            </form>
-        </header>
-        <ul class="list-group product mx-auto text-light">
-            <li class="list-group-item d-flex justify-content-between align-items-center">
-                <tr>
-                    <td> <img src="img/kylie.jpg" alt="" width="300px" height="300px"></td>
-                    <td >
-                        <p class="sname">
-                            Kylie LipKit
-                        </p>
-                       
-                    </td>
-                    <td><input type="number" class="quantity" value="1"></td>
-                    <td>99$</td>
-                </tr>
-                <i class="far fa-trash-alt delete"></i>
-            </li>
-            <li class="list-group-item d-flex justify-content-between align-items-center">
-                <tr>
-                    <td> <img src="img/kylie.jpg" alt="" width="300px" height="300px"></td>
-                   <td ><p class="sname">
-                    Kylie LipKit
-                </p> </td>
-                    <td><input type="number" class="quantity" value="1"></td>
-                    <td>99$</td>
-                </tr>
-                <i class="far fa-trash-alt delete"></i>
-            </li>
-            <li class="list-group-item d-flex justify-content-between align-items-center">
-                <tr>
-                    <td> <img src="img/kylie.jpg" alt="" width="300px" height="300px"></td>
-                   <td ><p class="sname">
-                    fdfdfd 
-                </p> </td>
-                    <td><input type="number" class="quantity" value="1"></td>
-                    <td>99$</td>
-                </tr>
-             <i class="far fa-trash-alt delete"></i>
-            </li>
-        </ul>
-     </div>
-    <script src="cart.js"></script>
+                    
+                    productList.forEach(function(product, index) {
+                        document.write(`
+                            <tr id="product-${index}">
+                                <td><img src="${product.image}" alt="" width="300px" height="300px"></td>
+                                <td class = "product-name">${product.name}</td>
+                                <td><input type="number" class="quantity" value="1"></td>
+                                <td>${product.price}</td>
+                                <td><i class="far fa-trash-alt delete" data-index="${index}"></i></td>
+                            </tr>
+                        `);
+                    });
+                </script>
+            </tbody>
+        </table>
+    </li>
+</ul>
+
+
+
+<script src="cart.js"></script>
 </body>
 </html>
