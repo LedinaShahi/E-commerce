@@ -71,7 +71,7 @@ produkte.forEach(function(produkt) {
 
 });
 
-function shopnow () {
+const shopnow = ()=> {
     window.location.href = "shop.html";
 }
 

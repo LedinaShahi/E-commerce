@@ -34,15 +34,16 @@
                     <th>Product Name</th>
                     <th>Quantity</th>
                     <th>Price</th>
-                    <th>Action</th>
+                    <th>Delete</th>
                 </tr>
             </thead>
             <tbody>
                 <script>
                     var productList = JSON.parse(sessionStorage.getItem('productList')) || [];
-
-                    
-                    productList.forEach(function(product, index) {
+                    var totalQuantity = 0;
+                    let totalPrice = 0;
+                    productList.forEach((product, index)=> {
+                        totalPrice += parseFloat (product.price) 
                         document.write(`
                             <tr id="product-${index}">
                                 <td><img src="${product.image}" alt="" width="300px" height="300px"></td>
@@ -52,15 +53,27 @@
                                 <td><i class="far fa-trash-alt delete" data-index="${index}"></i></td>
                             </tr>
                         `);
+
+                        totalQuantity += 1;
                     });
+
+                    document.getElementsByClassName('total-quantity').textContent = totalQuantity;
+                    document.getElementsByClassName('total-price').textContent = totalPrice;
+
                 </script>
-            </tbody>
-        </table>
+                <script>
+                    document.write(`
+                    <tr>
+                        <td colspan = "2" class = "text-right"><strong> TOTAL: </strong></td>
+                        <td class = "total-quantity" >${totalQuantity}</td>
+                        <td class = "total-price">${totalPrice}$ </td>
+                     </tr>
+                    `)
+                </script>
+             </tbody>
+         </table>
     </li>
 </ul>
-
-
-
 <script src="cart.js"></script>
 </body>
 </html>

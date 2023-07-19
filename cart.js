@@ -40,6 +40,8 @@ var searchInput = document.getElementById("searchInput");
             }
         });
    
+//total items and price
+
 
 
 

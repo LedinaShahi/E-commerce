@@ -782,7 +782,7 @@ button[type="submit"] {
     text-decoration: none;
 }
 
-/* Resetimi i stilizimit parazgjedhur */
+
 * {
     margin: 0;
     padding: 0;
@@ -807,52 +807,78 @@ button[type="submit"] {
     color: #ff69b4;
   }
   
+  .list-group {
+    margin: 20px;
+    padding: 0;
+  }
+
+  .list-group-item {
+    background-color: #fff;
+    border: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+
   .product-list {
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
   }
-  
+
   .product-list th,
   .product-list td {
+    border: 1px solid #ddd;
     padding: 10px;
-    text-align: center;
-    border-bottom: 1px solid #ccc;
   }
-  
+
   .product-list th {
-    background-color: #ff69b4;
-    color: #fff;
+    background-color: #f2f2f2;
+    text-align: left;
+    font-weight: bold;
   }
-  
+
   .product-list img {
     max-width: 100px;
+    max-height: 100px;
+    object-fit: cover;
   }
-  
-  .quantity {
-    width: 50px;
-  }
-  
-  .total-price {
-    text-align: right;
+
+  .product-name {
     font-weight: bold;
-    margin-top: 20px;
-  }
-  
-  .delete {
-    color: #ff69b4;
-    cursor: pointer;
-  }
-  
-  .delete:hover {
-    color: #ff007f;
   }
 
-
+  
   .search {
-    height: 485px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
   }
+
+  .search input {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    width: 300px;
+    font-size: 14px;
+    color: #555;
+  }
+
   
+  .total-row {
+    font-weight: bold;
+    background-color: #f2f2f2;
+  }
+
+  .total-row td {
+    padding: 10px;
+    text-align: right;
+  }
+
+
+
 
 
 
